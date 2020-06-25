@@ -83,6 +83,7 @@ def Forward_to_Twitter(client:pyrogram.Client, message:pyrogram.Message):
         pass
     if(message.reply_to_message == None):
         telebot.send_message(
+            reply_to_message_id=message.message_id,
             chat_id=groupID, 
             text="拱拱(也有可能是猪猪)刚才对着空气回复了!\nTwitter不能转发空气!!!")
     pass
