@@ -1,27 +1,22 @@
-# 工具拱 - ChatID
+# bionicCamber/chatID.py
 # 收到/id时回复
 # 测试用途.
 
 import pyrogram
-import json
+import json, logging
+import api
 
-with open("./auth.json","r") as f:
-    auth = json.load(f)
+telebot = api.telebot
 
-telebot = pyrogram.Client(
-    session_name = "atCambot",
-    bot_token = auth["telegram-bot-token"],
-    api_id = auth["telegram-user"]["id"],
-    api_hash = auth["telegram-user"]["hash"],
-    )
-
-@telebot.on_message(pyrogram.Filters.command(["chatid", "chatid@atCambot"]))
+@telebot.on_message(pyrogram.Filters.command(["chatid", "chatid@"+telebot.get_me.username]))
 def ChatIDHandler(client:pyrogram.Client, message:pyrogram.Message):
+    logging.warn("/Chatid recieved at " + str(message.chat.id))
     replyText = "这里是拱拱的工具拱喵. 现在放送Chat相关信息: \
     \nChat ID= {chatID}\
     \nChat type= {chatType}\
     \nAdditional Properties= {additional}\
-    \nFly safely. Bionic Camber out."
+    \n本命令作为Debug用, 这说明了仿生拱拱的网络功能一切正常.\
+    \nFrom bionicCamber/ChannelID 0.9 stable"
     chatID=message.chat.id
     client.send_message(
         reply_to_message_id=message.message_id,
@@ -29,5 +24,7 @@ def ChatIDHandler(client:pyrogram.Client, message:pyrogram.Message):
         chat_id=message.chat.id)
     pass
 
-if(__name__=="__main__"):telebot.run()
-else:telebot.start()
+@telebot.on_message(pyrogram.Filters.command(["about", "about@atCambot"]))
+
+if(__name__=="__main__"):
+    telebot.run()
