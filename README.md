@@ -11,6 +11,7 @@ Camber自己使用的Bot, Written in Python.
 3. ChatIDs. [Almost]
 4. ~~改群名~~ 无情的睡眠质量监测机器
 5. 数据库 [咕咕咕] 和第三个相关
+6. 完整的Logging使用
 
 ### bionicCamber/Retweet
 启动Bot.
@@ -24,5 +25,5 @@ Camber自己使用的Bot, Written in Python.
 `/S3` `/S0ix`出现时  
 `/S0` -> 起床
 
-## Update Logs
+## Update Logs/Todos
 [UpdateLogs.md](./UpdateLogs.md)

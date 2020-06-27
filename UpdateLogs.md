@@ -22,3 +22,4 @@ Unknown -> 0.9 pre-stable
 Feature: 剪切Tweets
 Feature: 完善消息格式
 Feature: 带有媒体的Retweet
+Debug: Logging module
