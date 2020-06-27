@@ -17,9 +17,9 @@ Minor bug fixes.
 Unknown -> 0.9 pre-stable
 
 ### Todo incoming updates
-在鹿上了: `bionicCamber.service`: 用于systemd的服务. 
-还没写: `Sleeeee.py`: 无情的睡眠提醒机器
-Feature: 剪切Tweets
-Feature: 完善消息格式
-Feature: 带有媒体的Retweet
+在鹿上了: `bionicCamber.service`: 用于systemd的服务.   
+还没写: `Sleeeee.py`: 无情的睡眠提醒机器  
+Feature: 剪切Tweets  
+Feature: 完善消息格式  
+Feature: 带有媒体的Retweet  
 Debug: Logging module
