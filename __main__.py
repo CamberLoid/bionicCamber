@@ -5,14 +5,19 @@ import api
 import os,sys,asyncio
 import pyrogram, tweepy
 
-activeBots = ["ChannelID", "Retweet"]
+activeBots = ["chatID", "Retweet"]
 
 # Pyrogram auth
 telebot = api.telebot
 # tweepy auth
 tweetapi = api.tweetapi
 
+if __name__ == "__main__":
+    telebot.start()
+    
 for module in activeBots:
     __import__(module)
 
-telebot.run()
+if __name__ == "__main__":
+    telebot.idle()
+
