@@ -1,0 +1,14 @@
+# bionicCamber/bionicCamber.service
+# A systemd unit
+
+[Unit]
+Description=Bionic Camber Bot Deamon
+
+[Service]
+Type=simple
+After=network-online.targets
+User=root
+ExecStart=/usr/bin/python3 /root/camberBot/__init.py
+
+[Install]
+WantedBy=multi-user.target
