@@ -1,9 +1,12 @@
 # bionicCamber/api.py
-# 存了各种API的对象
+# 存了各种API对象的模块
+
 import pyrogram, tweepy
 import json, redis, logging, sched, time
 with open("./auth.json","r") as f:
     auth = json.load(f)
+with open("./config.json") as f:
+    config = json.load(f)
 
 # Pyrogram Auth/API Object
 telebot = pyrogram.Client(
